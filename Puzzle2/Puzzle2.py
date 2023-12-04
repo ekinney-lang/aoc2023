@@ -28,7 +28,7 @@ def splitColorsAndCubes(myString):
 
 def evaluateGame(myList):
     # Check each of the inputs of the list
-
+    # temp = sorted(gamesSplit[0].strip(),key=lambda x: len(x))
     # Check Red using redIsGood, as long as it doesn't return null
     # Check Green using greenIsGood, as long as it doesn't return null
     # Check blue using blueIsGood, as long as it doesn't return null
