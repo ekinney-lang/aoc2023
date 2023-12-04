@@ -12,12 +12,14 @@ def getGameNumber(myString):
 
 def splitGames(myString):
     # Split out each game by the semicolon using split()
+    # This could probably just be a lamda function.
     output = myString.split(";")
     return output
 
 
 def splitColorsAndCubes(myString):
     # Split out each of the green, red or blue values using split().
+    # This could probably just be a lamda function.
     tempoutput = myString.split(",")
     temp = [tempstr.split() for tempstr in tempoutput]
     output = temp
@@ -26,7 +28,7 @@ def splitColorsAndCubes(myString):
 
 def evaluateGame(myList):
     # Check each of the inputs of the list
-    
+
     # Check Red using redIsGood, as long as it doesn't return null
     # Check Green using greenIsGood, as long as it doesn't return null
     # Check blue using blueIsGood, as long as it doesn't return null
@@ -59,7 +61,7 @@ final_val = 0
 for line in input_lines:
     # Get the output split between game number and output
     output = getGameNumber(line)
-    # Get just the game number's int. We will not do anything with this if it isn't important.
+    # Get just the game number's int. Only used if needed.
     gameNum = int("".join(filter(str.isdigit, output[0])))
     # Get to the next level of all the strings
     gameFullString = output[1]
