@@ -2,7 +2,6 @@
 with open("./input2.txt") as file:
     input_lines = [line.strip() for line in file]
 
-
 # %%
 def getGameNumber(myString):
     # Split out game based on colon
@@ -28,8 +27,11 @@ def splitColorsAndCubes(myString):
 
 def evaluateGame(myList):
     # Check each of the inputs of the list
-    # temp = sorted(gamesSplit[0].strip(),key=lambda x: len(x))
+    splitAll = [splitColorsAndCubes(game) for game in myList]
     # Check Red using redIsGood, as long as it doesn't return null
+    # for game in splitAll:
+    #     if game[1] == 'red'
+    #         redValGood = 
     # Check Green using greenIsGood, as long as it doesn't return null
     # Check blue using blueIsGood, as long as it doesn't return null
 
@@ -41,18 +43,33 @@ def evaluateGame(myList):
 
 def redIsGood(myString):
     # Check Red has 12 or less cubes
-    print("")
+    inVal = int(myString)
+    if inVal<=12:
+        isGood = True
+    else
+        isGood = False
+    return isGood
+    
 
 
 def greenIsGood(myString):
     # check Green has 13 or less cubes
-    print("")
+        inVal = int(myString)
+    if inVal<=12:
+        isGood = True
+    else
+        isGood = False
+    return isGood
 
 
 def blueIsGood(myString):
     # Check Blue is 14 or less cubes
-    print("")
-
+        inVal = int(myString)
+    if inVal<=12:
+        isGood = True
+    else
+        isGood = False
+    return isGood
 
 # %%
 # This is our main functions to run through and get values out.
@@ -77,3 +94,5 @@ for line in input_lines:
 examplePass = ['Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green']
 exampleFail = ['Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red']
 
+
+# %%
